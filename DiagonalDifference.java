@@ -2,7 +2,14 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 
+/*
+  Solution to difference of diagonals in an array
+  See problem: https://www.hackerrank.com/challenges/diagonal-difference/submissions/code/14098322
+*/
+
 class DiagonalDifference {
+
+
 
  int getTop2BottomSum( int matrix[][] ) {
     int l2r = 0;
