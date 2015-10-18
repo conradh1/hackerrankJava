@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
 public class TreeHeight {
 
   public static void main(String[] args) {
@@ -26,18 +29,14 @@ public class TreeHeight {
     root.right.left = new Node(6);
     root.right.left.left = new Node(7);
 
-    System.out.println("Finding height of Tree");
-    height(root);
-    System.out.println("");
+    System.out.println("Finding height of Tree");    
+    System.out.println(""+height(root));
   }
 
-  public void height(Node node) {
-        
-    if ( node == null ) {
+  public int height(Node node) {
+    if ( node == null )
       return 0;
-    }
-    if ( node.left != null)
-      return 1 + height ( node.left );
+    return Math.max( height(node.left), height(node.right)) +1;    
   }
 
 }
