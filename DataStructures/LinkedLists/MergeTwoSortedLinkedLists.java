@@ -14,46 +14,46 @@ class Merge {
   }
   Node MergeLists(Node headA, Node headB) {   
     Node mergeNode = new Node();
-    Node tmpNode = new Node();
+    Node current = new Node();
            
     // both are null
     
     // case A is not null and B is null
-    if ( headB == null)
-      return headA;
-    // case A is null and B is not null
     if ( headA == null)
       return headB;
-      
+    // case A is null and B is not null
+    if ( headB == null)
+      return headA;
+          
+    // case for first node
     if ( headA.data < headB.data ) {
-      // headA has the smallest number
       mergeNode = headA;
       headA = headA.next;
     }
     else {
-      // swap so headA has the smallest
       mergeNode = headB;
       headB = headB.next;
     }
-    tmpNode = mergeNode;
-    while ( headA != null && headB != null ) {
-        if ( headA.data < headB.data ) {
-          mergeNode = headA;
-          headA = headA.next;
-        }
-        else {
-          mergeNode = headB;
-          headB = headB.next;        
-        }
-        mergeNode = mergeNode.next;
-    }
-    // end trails
-    if ( headA != null )
-      mergeNode.next = headA;
     
-    if ( headB != null )
-      mergeNode.next = headB;
-             
-    return tmpNode;
+    current = mergeNode;
+    while ( headA != null && headB != null ) {      
+      if ( headA.data < headB.data ) {
+        current.next = headA;
+        current = current.next;
+        headA = headA.next;
+      }
+      else {
+        current.next = headB;
+        current = current.next;
+        headB = headB.next;
+      }          
+    }                
+      if ( headA == null ) {
+        current.next = headB;        
+      }
+      else if ( headB == null ) {
+        current.next = headA;        
+      }
+    return mergeNode;
   }
 }
