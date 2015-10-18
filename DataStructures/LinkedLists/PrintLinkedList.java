@@ -8,17 +8,17 @@ Note that this submission is only the method print.
 
 */
 class PrintLinkedList {
-class Node {
+  class Node {
      int data;
      Node next;
   }
-void Print(Node head) {
-  Node tmpNode = head;
-  while (tmpNode != null) {
-    System.out.println(tmpNode.data+"");
-    tmpNode = tmpNode.next;
+  void Print(Node head) {
+    Node tmpNode = head;
+    while (tmpNode != null) {
+      System.out.println(tmpNode.data+"");
+      tmpNode = tmpNode.next;
+    }
   }
-}
 
 
 
