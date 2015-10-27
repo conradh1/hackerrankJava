@@ -3,6 +3,20 @@ import java.io.*;
 
 class InsertSort1 {
 
+public void insertionSort(int array[]) {
+  int size = array.length;
+  int j = 0;
+  for ( int i = 1; i < size; i++) {
+    j = i;
+    while ( j > 0 && array[j-1] > array[j] ) {      
+        array = swap(array,j,j-1);
+        j--;
+        System.out.println(Arrays.toString(array));
+    }        
+  }
+
+   System.out.println(Arrays.toString(array));
+}
 
 public void insertionSort1(int ar[]) {
   int index;
