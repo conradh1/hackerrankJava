@@ -18,6 +18,12 @@ public void insertionSort(int array[]) {
    System.out.println(Arrays.toString(array));
 }
 
+
+static void printArray(int[] ar) {
+        for(int n: ar){
+            System.out.print(n+" ");
+        }
+}
 public void insertionSort1(int ar[]) {
   int index;
 
