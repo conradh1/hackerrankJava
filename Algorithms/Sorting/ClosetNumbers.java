@@ -1,5 +1,7 @@
 import java.util.*;
 
+// See: https://www.hackerrank.com/challenges/closest-numbers
+
 public class ClosetNumbers {
      
     private int array[];
