@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 /*
- HackerRank solution: https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list
+ HackerRank solution: https://www.hackerrank.com/challenges/reverse-a-linked-list
 */
 
 class ReverseLinkedList {
